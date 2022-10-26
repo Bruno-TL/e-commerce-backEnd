@@ -1,0 +1,27 @@
+[
+{
+    "id": 1,
+    "produto": "Calça Jeans",
+    "valor": 50
+},
+{
+    "id": 2,
+    "produto": "Camisa Lacoste",
+    "valor": 80
+},
+{
+    "id": 3,
+    "produto": "Mochila",
+    "valor": 100
+},
+{
+    "id": 4,
+    "produto": "Tênis Nike",
+    "valor": 120
+},
+{
+    "id": 5,
+    "produto": "Relogio",
+    "valor": 130
+}
+]
