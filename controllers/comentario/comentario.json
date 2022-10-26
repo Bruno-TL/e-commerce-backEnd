@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "comentario": "Chegou rapido, produto bem feito",
+        "nomeDoAutor": "Samuel",
+        "IdProduto": "1",
+        "date": "22/10/2022"
+    },
+    {
+        "id": "2",
+        "comentario": "recomendo esse tênis, mt boa a qualidade",
+        "nomeDoAutor": "Marcelo",
+        "IdProduto": "2",
+        "date": "22/10/2022"
+    },
+    {
+        "id": "3",
+        "comentario": "Uma porcaria, não recomendo esse lixo de sapato.",
+        "nomeDoAutor": "Matheus",
+        "IdProduto": "3",
+        "date": "13/10/2022"
+    }
+]
