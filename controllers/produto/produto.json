@@ -25,13 +25,13 @@
     "produto": "Tênis Nike",
     "categoria": "Tênis",
     "Tamanho": "38",
-    "valor": 120
+    "valor": 150
 },
 {
     "id": 5,
     "produto": "Relogio",
     "categoria": "Acessorio",
     "Tamanho": "Unico",
-    "valor": 130
+    "valor": 200
 }
 ]
