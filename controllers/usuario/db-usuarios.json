@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "nome": "Junim",
+    "idade": 28,
+    "cidade": "Fortaleza",
+    "email": "junim@email.com",
+    "senha": "123456",
+    "token": "" 
+  },
+  {
+    "id": 2,
+    "nome": "Zezim",
+    "idade": 29,
+    "cidade": "Pacatuba",
+    "email": "zezim@email.com",
+    "senha": "123456",
+    "token": "" 
+  },
+  {
+    "id": 3,
+    "nome": "Carlim",
+    "idade": 30,
+    "cidade": "Maracanaú",
+    "email": "carlim@email.com",
+    "senha": "123456",
+    "token": "" 
+  }
+]
