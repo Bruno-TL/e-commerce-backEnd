@@ -5,6 +5,7 @@ const port = 3000;
 const produtoRota = require("./controllers/produto/router.js");
 const comentarioRota = require("./controllers/comentario/router.js");
 const usuarioRota = require("./controllers/usuario/router.js");
+const promocaoRota = require("./controllers/promocoes/router.js");
 
 app.use(express.json());
 
@@ -14,8 +15,8 @@ app.get("/", (req, res) => {
 
 app.use("/", produtoRota);
 app.use("/", comentarioRota);
-
 app.use("/", usuarioRota);
+app.use("/", promocaoRota);
 
 app.use((req, res) => {
   res.status(404).send("{message: rota não encontrada}");
