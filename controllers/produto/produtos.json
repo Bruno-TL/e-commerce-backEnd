@@ -1,1 +1,39 @@
-[{"id":1,"produto":"Calça Jeans","categoria":"Roupa","Tamanho":"42","valor":50},{"id":2,"produto":"Camisa Lacoste","categoria":"Roupa","Tamanho":"M","valor":80},{"id":3,"produto":"Mochila","categoria":"Acessorio","Tamanho":"G","valor":100},{"id":4,"produto":"Tênis Nike","categoria":"Tênis","Tamanho":"38","valor":150},{"id":5,"produto":"Relogio","categoria":"Acessorio","Tamanho":"Unico","valor":200},{"id":7,"produto":"Bandana","categoria":"Acessorio","Tamanho":"Unico","valor":30},{"id":8,"produto":"Tiara","categoria":"Acessorio","Tamanho":"Unico","valor":50},{"id":9,"produto":"Oculos","categoria":"Acessorio","Tamanho":"Unico","valor":300},{"id":9,"produto":"Tenis Vans","categoria":"Sapato","Tamanho":"35","valor":200}]
+
+[
+{
+    "id": 1,
+    "produto": "Calça Jeans",
+    "categoria": "Roupa",
+    "Tamanho": "42",
+    "valor": 50
+},
+{
+    "id": 2,
+    "produto": "Camisa Lacoste",
+    "categoria": "Roupa",
+    "Tamanho": "M",
+    "valor": 80
+},
+{
+    "id": 3,
+    "produto": "Mochila",
+    "categoria": "Acessorio",
+    "Tamanho": "G",
+    "valor": 100
+},
+{
+    "id": 4,
+    "produto": "Tênis Nike",
+    "categoria": "Tênis",
+    "Tamanho": "38",
+    "valor": 150
+},
+{
+    "id": 5,
+    "produto": "Relogio",
+    "categoria": "Acessorio",
+    "Tamanho": "Unico",
+    "valor": 200
+}
+]
+
