@@ -15,6 +15,11 @@ router.post('/carrinho/:id', (req, res) => {
     );
 })
 
+router.put ('/carrinho/:id', (req, res) => {
+    res.send(
+        controller.attCarrinho(req.params.id, req.body)
+    )
+})
 
 
 

@@ -52,10 +52,31 @@ function addCarrinho(idUsuario, dados) {
     return (carrinho)
 }
 
-// function attCarrinho(){
-//     return res.send('Carrinho atualizado').status(200);
-// }
+function attCarrinho(idUsuario, dados){
+    if (!idUsuario) {
+        res.send.status(400)
+        
+    }
+
+    let usuario = buscarUsuario(idUsuario);
+    let resultado = carrinho.filter(c => c.usuario == idUsuario);
+    
+    // itemAtualizado = {
+    //     id: dados.id,
+    //     produto: resultado.produto,
+    //     usuario: resultado.usuario,
+    //     quantidade: dados.quantidade
+    // }
+
+    let itemAtualizado = resultado.map(cada => {
+        cada.id = dados.id,
+        cada.quantidade = dados.quantidade
+    })
+    return itemAtualizado
+}
+
 module.exports = {
     carrinhoUsuario,
     addCarrinho,
+    attCarrinho,
 };
