@@ -9,5 +9,13 @@ router.get('/carrinho/:id', (req, res) => {
     
 })
 
+router.post('/carrinho/:id', (req, res) => {
+    res.send(
+        controller.addCarrinho(req.params.id, req.body)
+    );
+})
+
+
+
 
 module.exports = router;
