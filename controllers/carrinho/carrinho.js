@@ -7,21 +7,25 @@ let carrinho = [
         id: '1',
         produto: 'Addidas',
         usuario: '1',
-        quantidade: '2',
+        quantidade: 2,
     },
     {
         id: '2',
         produto: 'Nike',
         usuario: '2',
-        quantidade: '3',
+        quantidade: 3,
     },
     {
         id: '3',
         produto: 'opanca',
         usuario: '2',
-        quantidade: '1',
+        quantidade: 1,
     },
 ]
+
+function carrinhos(){
+    return carrinho
+}
 
 function carrinhoUsuario(idUsuario) {
 
@@ -48,34 +52,24 @@ function addCarrinho(idUsuario, dados) {
     }
     carrinho.push(novoItem);
 
-    //como não foi pedido apenas o novo, estaremos enviando todos ao mesmo tempo.
-    return (carrinho)
+    return novoItem
 }
 
-function attCarrinho(idUsuario, dados){
-    if (!idUsuario) {
+function attCarrinho(idProduto, dados){
+    if (!idProduto) {
         res.send.status(400)
-        
     }
 
-    let usuario = buscarUsuario(idUsuario);
-    let resultado = carrinho.filter(c => c.usuario == idUsuario);
-    
-    // itemAtualizado = {
-    //     id: dados.id,
-    //     produto: resultado.produto,
-    //     usuario: resultado.usuario,
-    //     quantidade: dados.quantidade
-    // }
-
-    let itemAtualizado = resultado.map(cada => {
-        cada.id = dados.id,
+    let resultado = carrinho.filter(c => c.id == idProduto);
+    resultado.map(cada => {
         cada.quantidade = dados.quantidade
     })
-    return itemAtualizado
+
+    return resultado
 }
 
 module.exports = {
+    carrinhos,
     carrinhoUsuario,
     addCarrinho,
     attCarrinho,
