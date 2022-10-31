@@ -30,7 +30,7 @@ function carrinhoUsuario(idUsuario) {
   if (!idUsuario) {
     return res.send("Usuario não encontrado").status(400);
   }
-
+  console.log(carrinho);
   let usuario = buscarUsuario(idUsuario);
   let resultado = carrinho.filter((c) => c.usuario == usuario.id);
   return resultado;

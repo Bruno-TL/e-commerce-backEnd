@@ -1,4 +1,4 @@
-GET http://localhost:3000/usuario/2
+GET http://localhost:3000/usuario/3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6Ikp1bmltIiwiaWRhZGUiOjI4LCJjaWRhZGUiOiJGb3J0YWxlemEiLCJlbWFpbCI6Imp1bmltQGVtYWlsLmNvbSIsInNlbmhhIjoiMTIzNDU2IiwidG9rZW4iOiIiLCJpYXQiOjE2NjcyNTYzMTV9.qxKFTtRByXAQkY7P6UAG7qy7kblbmHb2jWmMrzFrEW4
 
 ###
@@ -10,3 +10,7 @@ Content-Type: application/json
 	"email": "junim@email.com",
 	"senha": "123456"
 }
+
+###
+
+POST http://localhost:3000/carrinho/1
