@@ -5,7 +5,7 @@ const usuarioController = require("./usuario.js");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-router.get("/usuario", usuarioController.autenticar, (req, res) => {
+router.get("/usuarios", usuarioController.autenticar, (req, res) => {
   // console.log(req.usuario);
   res.status(200).send(usuarioController.listar());
 });
