@@ -25,7 +25,7 @@
 
 # 5° Carrinho 
 - GET /carrinhos => Ver todos o produtos/carrinhos;
-- GET /carrinho/:id => Pegar todos produtos do carrinho com o id do usuário;
+- GET /carrinho/:id => Pegar todos produtos do carrinho com o id do usuário(com jwt);
 - POST /carrinho/:id => Criar um produto para o carrinho do usuário(id) específico;
 - PUT /carrinho/:id => Modificar a quantidade do produto, produto sendo escolhido pelo o id dele;
 - DELETE /carrinho/:idproduto => Zerando todos os valores do produto;
