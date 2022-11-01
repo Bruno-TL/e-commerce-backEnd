@@ -4,7 +4,7 @@ const { buscarUsuario } = require("../usuario/usuario");
 let carrinho = [
   {
     id: "1",
-    produto: "Addidas",
+    produto: "Adidas",
     usuario: "1",
     quantidade: 2,
   },
@@ -16,7 +16,7 @@ let carrinho = [
   },
   {
     id: "3",
-    produto: "opanca",
+    produto: "Opanca",
     usuario: "2",
     quantidade: 1,
   },
