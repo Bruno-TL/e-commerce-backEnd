@@ -28,7 +28,9 @@ function autenticar(req, res, next) {
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, usuario) => {
     if (err) {
-      return res.sendStatus(403);
+      return res
+        .status(401)
+        .send("Você precisa estar logado para acessar esses recursos.");
     }
     req.usuario = usuario;
     next();
