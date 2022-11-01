@@ -1,6 +1,4 @@
 const fs = require("fs");
-// const express = require("express");
-// const app = express();
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
@@ -29,7 +27,6 @@ function autenticar(req, res, next) {
   }
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, usuario) => {
-    console.log(usuario);
     if (err) {
       return res.sendStatus(403);
     }
