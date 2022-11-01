@@ -16,18 +16,18 @@ function listar() {
 }
 
 function buscarUsuario(usuarioID) {
-  return listar().find((usuario) => usuario.id == Number(usuarioID));
+  return listar().find((usuario) => usuario.id === Number(usuarioID));
 }
 
 function autenticar(req, res, next) {
   const authHeader = req.headers["authorization"];
   const token = authHeader && authHeader.split(" ")[1];
-  if (token === null) {
+  if (token == null) {
     return res.sendStatus(401);
   }
 
-  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, usuario) => {
-    if (err) {
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (erro, usuario) => {
+    if (erro) {
       return res
         .status(401)
         .send("Você precisa estar logado para acessar esses recursos.");

@@ -13,9 +13,7 @@ router.get("/usuario/:usuarioID", usuarioController.autenticar, (req, res) => {
   if (req.usuario.id !== Number(req.params.usuarioID)) {
     return res
       .status(403)
-      .send(
-        "Acesso negado. Você está tentando acessar dados de uma conta diferente da sua."
-      );
+      .send("Você está tentando acessar dados de uma conta diferente da sua.");
   }
 
   let usuario = usuarioController.buscarUsuario(req.params.usuarioID);
