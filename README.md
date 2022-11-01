@@ -1,9 +1,17 @@
-## e-commerce-backEnd
 # Back-end do projeto e-commerce:
 (https://github.com/Bruno-TL/Digital-Store) => Ainda não implementado .
 
-- Primeiros comados para rodar o projeto no modo saboroso = npm install && npm start .
+# Início :
+- Fazer um clone do nosso repositório: git clone https://github.com/Bruno-TL/e-commerce-backEnd
+- Primeiros comados para rodar o projeto no modo saboroso: npm install && npm start .
 - Usamos Insomnia para testar os end-points. End-points do insomnia salvo em arquivo.
+
+# End-points:
+- usuario (com jwt)
+  1: /usuarios =>  Vem todos os usuários;
+  2: /usuario/:usuarioID => Vem o usuário com o id passado na url com autenticação no Headers;
+  3: /login => Fazer o login do usuario com o email e senha, gerando um token.
+
 
 # Colaboradores:
 Bruno: https://www.linkedin.com/in/t-bruno-dev-js/
