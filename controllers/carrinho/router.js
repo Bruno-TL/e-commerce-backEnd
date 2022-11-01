@@ -12,7 +12,9 @@ router.get("/carrinho/:id", usuarioController.autenticar, (req, res) => {
   if (req.usuario.id !== Number(req.params.id)) {
     return res
       .status(403)
-      .send("Você está tentando acessar dados de uma conta diferente da sua.");
+      .send(
+        `${req.usuario.nome}, você está tentando acessar dados de uma conta diferente da sua.`
+      );
   }
 
   res.send(controller.carrinhoUsuario(req.params.id));

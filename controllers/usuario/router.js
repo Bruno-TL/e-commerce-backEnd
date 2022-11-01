@@ -13,7 +13,9 @@ router.get("/usuario/:usuarioID", usuarioController.autenticar, (req, res) => {
   if (req.usuario.id !== Number(req.params.usuarioID)) {
     return res
       .status(403)
-      .send("Você está tentando acessar dados de uma conta diferente da sua.");
+      .send(
+        `${req.usuario.nome}, você está tentando acessar dados de uma conta diferente da sua.`
+      );
   }
 
   let usuario = usuarioController.buscarUsuario(req.params.usuarioID);
@@ -29,6 +31,14 @@ router.post("/login", (req, res) => {
   const usuarios = JSON.parse(fs.readFileSync(__dirname + "/db-usuarios.json"));
   const { email, senha } = req.body;
 
+  if (!email && !senha) {
+    return res.status(401).send("Você precisa digitar email e senha.");
+  } else if (!email) {
+    return res.status(401).send("Você precisa digitar um email.");
+  } else if (!senha) {
+    return res.status(401).send("Você precisa digitar uma senha.");
+  }
+
   const usuario = usuarios.find(
     (us) => us.email === email && us.senha === senha
   );
@@ -38,9 +48,6 @@ router.post("/login", (req, res) => {
       .status(401)
       .send("Para se logar, é necessário fornecer email e senha cadastrados.");
   }
-
-  // const username = req.body.username;
-  // const user = { name: username };
 
   const token = jwt.sign(usuario, process.env.ACCESS_TOKEN_SECRET);
   res.json({ Authorization: "Bearer" + " " + token });
