@@ -65,9 +65,23 @@ function attCarrinho(idProduto, dados) {
   return resultado;
 }
 
+function deletarCarrinho (idProduto) {
+  let zerandoOProduto = carrinho.filter(produto => produto.id == idProduto)
+
+  zerandoOProduto.map((cada) => {
+    cada.id = idProduto,
+    cada.produto = 0,
+    cada.usuario = 0,
+    cada.quantidade = 0
+  });
+
+  return zerandoOProduto;
+}
+
 module.exports = {
   carrinhos,
   carrinhoUsuario,
   addCarrinho,
   attCarrinho,
+  deletarCarrinho,
 };

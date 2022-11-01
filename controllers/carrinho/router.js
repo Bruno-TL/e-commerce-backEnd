@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const controller = require("./carrinho");
 
+
 const usuarioController = require("../usuario/usuario");
 
 router.get("/carrinhos", (req, res) => {
@@ -26,6 +27,10 @@ router.post("/carrinho/:id", (req, res) => {
 
 router.put("/carrinho/:id", (req, res) => {
   res.send(controller.attCarrinho(req.params.id, req.body));
+});
+
+router.delete("/carrinho/:idproduto", (req, res) => {
+  res.send(controller.deletarCarrinho (req.params.idproduto));
 });
 
 module.exports = router;
