@@ -5,15 +5,30 @@
 - Fazer um clone do nosso repositório: git clone https://github.com/Bruno-TL/e-commerce-backEnd
 - Primeiros comados para rodar o projeto no modo saboroso: npm install && npm start .
 - Usamos Insomnia para testar os end-points. End-points do insomnia salvo em arquivo.
+- URL para testar o projeto : http://localhost:3000 ;
 
-# End-points:
-- usuario (com jwt)
-  1: /usuarios =>  Vem todos os usuários;
-  
-  2: /usuario/:usuarioID => Vem o usuário com o id passado na url com autenticação no Headers;
-  
-  3: /login => Fazer o login do usuario com o email e senha, gerando um token.
+## End-points:
+# 1° Usuário (com jwt)
+- GET /usuarios =>  Vem todos os usuários;
+- GET /usuario/:usuarioID => Vem o usuário com o id passado na url com autenticação no Headers;
+- POST /login => Fazer o login do usuario com o email e senha, gerando um token.
 
+# 2° Produtos 
+- GET /produtos => Para ver todos os produtos;
+- POST /produtos => Para criar um novo produto.
+
+# 3° Promoções
+- GET /promocao => Escolher os últimos dois produtos e colocar em promoção.
+
+# 4° Comentario
+- GET /comentario/:IdProduto => Ver os comentarios salvos em arquivo.
+
+# 5° Carrinho 
+- GET /carrinhos => Ver todos o produtos/carrinhos;
+- GET /carrinho/:id => Pegar todos produtos do carrinho com o id do usuário;
+- POST /carrinho/:id => Criar um produto para o carrinho do usuário(id) específico;
+- PUT /carrinho/:id => Modificar a quantidade do produto, produto sendo escolhido pelo o id dele;
+- DELETE /carrinho/:idproduto => Zerando todos os valores do produto;
 
 # Colaboradores:
 Bruno: https://www.linkedin.com/in/t-bruno-dev-js/
