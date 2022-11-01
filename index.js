@@ -11,7 +11,7 @@ const carrinhoRota = require("./controllers/carrinho/router");
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("ta funfando");
+  res.send("Olá. Seja bem-vindo à nossa API.");
 });
 
 app.use("/", produtoRota);
