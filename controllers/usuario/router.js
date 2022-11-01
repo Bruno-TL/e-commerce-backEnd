@@ -6,12 +6,10 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
 router.get("/usuarios", usuarioController.autenticar, (req, res) => {
-  // console.log(req.usuario);
   res.status(200).send(usuarioController.listar());
 });
 
 router.get("/usuario/:usuarioID", usuarioController.autenticar, (req, res) => {
-  // console.log(req.usuario.id);
   if (req.usuario.id !== Number(req.params.usuarioID)) {
     return res
       .status(403)
@@ -47,7 +45,6 @@ router.post("/login", (req, res) => {
 
   const accessToken = jwt.sign(usuario, process.env.ACCESS_TOKEN_SECRET);
   res.json({ Authorization: "Bearer" + " " + accessToken });
-  // res.send("Bearer" + " " q+ accessToken);
 });
 
 module.exports = router;
