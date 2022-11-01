@@ -9,7 +9,9 @@
 # End-points:
 - usuario (com jwt)
   1: /usuarios =>  Vem todos os usuários;
+  
   2: /usuario/:usuarioID => Vem o usuário com o id passado na url com autenticação no Headers;
+  
   3: /login => Fazer o login do usuario com o email e senha, gerando um token.
 
 
