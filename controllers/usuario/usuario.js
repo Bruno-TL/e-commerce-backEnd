@@ -30,7 +30,7 @@ function autenticar(req, res, next) {
     if (erro) {
       return res
         .status(401)
-        .send("Você precisa estar logado para acessar esses recursos.");
+        .send("Você precisa estar logado para acessar esse recurso.");
     }
     req.usuario = usuario;
     next();
