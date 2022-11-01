@@ -30,7 +30,6 @@ function carrinhoUsuario(idUsuario) {
   if (!idUsuario) {
     return res.send("Usuario não encontrado").status(400);
   }
-  console.log(carrinho);
   let usuario = buscarUsuario(idUsuario);
   let resultado = carrinho.filter((c) => c.usuario == usuario.id);
   return resultado;
@@ -65,14 +64,14 @@ function attCarrinho(idProduto, dados) {
   return resultado;
 }
 
-function deletarCarrinho (idProduto) {
-  let zerandoOProduto = carrinho.filter(produto => produto.id == idProduto)
+function deletarCarrinho(idProduto) {
+  let zerandoOProduto = carrinho.filter((produto) => produto.id == idProduto);
 
   zerandoOProduto.map((cada) => {
-    cada.id = idProduto,
-    cada.produto = 0,
-    cada.usuario = 0,
-    cada.quantidade = 0
+    (cada.id = idProduto),
+      (cada.produto = 0),
+      (cada.usuario = 0),
+      (cada.quantidade = 0);
   });
 
   return zerandoOProduto;

@@ -21,9 +21,9 @@ app.use("/", promocaoRota);
 app.use("/", carrinhoRota);
 
 app.use((req, res) => {
-  res.status(404).send("{message: rota não encontrada}");
+  res.status(404).send("A rota requerida não existe.");
 });
 
 app.listen(port, () => {
-  console.log(`BackEnd rodando na URL= http://localhost:${port}`);
+  console.log(`Rodando em http://localhost:${port}`);
 });

@@ -5,7 +5,7 @@ const usuarioController = require("./usuario.js");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
-router.get("/usuarios", usuarioController.autenticar, (req, res) => {
+router.get("/usuarios", (req, res) => {
   res.status(200).send(usuarioController.listar());
 });
 
@@ -18,7 +18,6 @@ router.get("/usuario/:usuarioID", usuarioController.autenticar, (req, res) => {
       );
   }
 
-  console.log(req.usuario);
   let usuario = usuarioController.buscarUsuario(req.params.usuarioID);
 
   if (!usuario) {
@@ -45,8 +44,8 @@ router.post("/login", (req, res) => {
   // const username = req.body.username;
   // const user = { name: username };
 
-  const accessToken = jwt.sign(usuario, process.env.ACCESS_TOKEN_SECRET);
-  res.json({ Authorization: "Bearer" + " " + accessToken });
+  const token = jwt.sign(usuario, process.env.ACCESS_TOKEN_SECRET);
+  res.json({ Authorization: "Bearer" + " " + token });
 });
 
 module.exports = router;
