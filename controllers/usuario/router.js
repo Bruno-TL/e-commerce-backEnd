@@ -37,7 +37,9 @@ router.post("/login", (req, res) => {
   );
 
   if (!usuario) {
-    return res.status(401).send("Email e/ou senha incorretos.");
+    return res
+      .status(401)
+      .send("Para se logar, é necessário fornecer email e senha cadastrados.");
   }
 
   // const username = req.body.username;
