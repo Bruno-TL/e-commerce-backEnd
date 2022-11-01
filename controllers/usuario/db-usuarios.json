@@ -1,27 +1,26 @@
 [
   {
     "id": 1,
-    "nome": "Junim",
+    "nome": "Fulano",
     "idade": 28,
     "cidade": "Fortaleza",
-    "email": "junim@email.com",
-    "senha": "123456"
+    "email": "fulano@email.com",
+    "senha": "12345"
   },
   {
     "id": 2,
-    "nome": "Zezim",
+    "nome": "Beltrano",
     "idade": 29,
     "cidade": "Pacatuba",
-    "email": "zezim@email.com",
-    "senha": "123456"
+    "email": "beltrano@email.com",
+    "senha": "12345"
   },
   {
     "id": 3,
-    "nome": "Carlim",
+    "nome": "Sicrano",
     "idade": 30,
     "cidade": "Maracanaú",
-    "email": "carlim@email.com",
-    "senha": "123456",
-    "token": ""
+    "email": "sicrano@email.com",
+    "senha": "12345"
   }
 ]
