@@ -5,8 +5,7 @@
     "idade": 28,
     "cidade": "Fortaleza",
     "email": "junim@email.com",
-    "senha": "123456",
-    "token": "" 
+    "senha": "123456"
   },
   {
     "id": 2,
@@ -14,8 +13,7 @@
     "idade": 29,
     "cidade": "Pacatuba",
     "email": "zezim@email.com",
-    "senha": "123456",
-    "token": "" 
+    "senha": "123456"
   },
   {
     "id": 3,
@@ -24,6 +22,6 @@
     "cidade": "Maracanaú",
     "email": "carlim@email.com",
     "senha": "123456",
-    "token": "" 
+    "token": ""
   }
 ]
